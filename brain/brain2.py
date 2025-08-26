@@ -85,6 +85,8 @@ def get_datafields(
 
     j0 = r0.json()
     results = j0.get("results", [])
+
+    # count: 满足条件的字段的总条数 (后续用来决定还需要翻几页)
     count = j0.get("count") if not search else None  # search mode may not return precise count
 
     # Paginate
