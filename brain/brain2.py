@@ -21,6 +21,7 @@ MAX_WAIT_SECONDS = 30 * 60    # max total polling time per simulation
 REAUTH_EVERY = 100            # re-login every N simulations (0 to disable)
 
 
+# sign in
 def sign_in(credentials_path: str = "brain_credentials.txt") -> Tuple[requests.Session, Dict[str, Any]]:
     """
     [Auth] Load credentials -> build Session with BasicAuth -> hit /authentication.
@@ -218,7 +219,8 @@ def main() -> None:
     # 2) fetch datafields
     search_scope = {"region": "USA", "delay": "1", "universe": "TOP3000", "instrumentType": "EQUITY"}
     df = get_datafields(s=sess, search_scope=search_scope, dataset_id="fundamental6")
-    print("[Info] dtypes:", dict(df.dtypes))
+    print("[Info] df num of columns:", len(df.columns.tolist()))
+    print("[Info] df columns:", df.columns.tolist())
 
     # 3) explore/inspect
     if "type" in df.columns:
@@ -230,6 +232,8 @@ def main() -> None:
     # 4) filter MATRIX only (our intended subset)
     df_matrix = df[df["type"] == "MATRIX"].copy() # 布尔索引取值
     print(f"[Filter] MATRIX rows: {len(df_matrix)}")
+    print(f"[Filter] MATRIX ids: {df_matrix['id'].values}")
+    
     if df_matrix.empty:
         raise ValueError("[Filter][Error] no MATRIX rows found.")
 
