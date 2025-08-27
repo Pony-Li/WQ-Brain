@@ -52,8 +52,7 @@ pip install requests pandas
 2. **Run the Main Script**  
    For example, to run the main workflow:
    ```bash
-   cd ./brain/
-   python ./brain1.py
+   python ./brain/brain1.py
    ```
 
 3. **Workflow Overview**

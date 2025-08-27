@@ -1,0 +1,36 @@
+2025-08-27 13:29:46,747 - INFO - [Main] Start.
+2025-08-27 13:29:50,306 - INFO - [Auth] OK.
+2025-08-27 13:29:50,323 - INFO - [Auth] Info: {'user': {'id': 'JL78495'}, 'token': {'expiry': 14400.0}, 'permissions': ['TUTORIAL']}
+2025-08-27 13:30:28,784 - INFO - [Fetch] data-fields rows: 886
+2025-08-27 13:30:28,792 - INFO - [Info] dtypes: {'id': dtype('O'), 'description': dtype('O'), 'dataset': dtype('O'), 'category': dtype('O'), 'subcategory': dtype('O'), 'region': dtype('O'), 'delay': dtype('int64'), 'universe': dtype('O'), 'type': dtype('O'), 'coverage': dtype('float64'), 'userCount': dtype('int64'), 'alphaCount': dtype('int64'), 'themes': dtype('O')}
+2025-08-27 13:30:28,805 - INFO - [Info] type counts: 
+MATRIX    574
+VECTOR    312
+Name: type, dtype: int64
+2025-08-27 13:30:28,894 - INFO - [Filter] MATRIX rows: 574
+2025-08-27 13:30:29,018 - INFO - [Alpha] expressions prepared: 51660
+2025-08-27 13:30:29,048 - INFO - [Alpha] payloads prepared: 51660
+2025-08-27 13:30:29,048 - INFO - [Run] Submit: group_rank(ts_rank(assets, 60), market)
+2025-08-27 13:30:31,007 - INFO - [Submit] Accepted. Progress URL: https://api.worldquantbrain.com/simulations/2vHip35W852kc9QyKwkbWFK
+2025-08-27 13:32:30,965 - INFO - [Run] Done: group_rank(ts_rank(assets, 60), market)
+2025-08-27 13:32:30,967 - INFO - [Alpha] #1 ID=x7QM0Kb Expr=group_rank(ts_rank(assets, 60), market)
+2025-08-27 13:32:30,968 - INFO - [Alpha] View: https://platform.worldquantbrain.com/alpha/x7QM0Kb
+2025-08-27 13:32:30,968 - INFO - [Run] Submit: group_rank(ts_rank(assets, 60), industry)
+2025-08-27 13:32:32,196 - INFO - [Submit] Accepted. Progress URL: https://api.worldquantbrain.com/simulations/3pl8QOfeh5dX93NaCckSEYK
+2025-08-27 13:33:50,998 - INFO - [Run] Done: group_rank(ts_rank(assets, 60), industry)
+2025-08-27 13:33:50,999 - INFO - [Alpha] #2 ID=13LvLNk Expr=group_rank(ts_rank(assets, 60), industry)
+2025-08-27 13:33:50,999 - INFO - [Alpha] View: https://platform.worldquantbrain.com/alpha/13LvLNk
+2025-08-27 13:33:51,004 - INFO - [Run] Submit: group_rank(ts_rank(assets, 60), subindustry)
+2025-08-27 13:33:52,245 - INFO - [Submit] Accepted. Progress URL: https://api.worldquantbrain.com/simulations/4ojpd02rR4AH9kl11MXbhwgI
+2025-08-27 13:35:13,374 - INFO - [Run] Done: group_rank(ts_rank(assets, 60), subindustry)
+2025-08-27 13:35:13,375 - INFO - [Alpha] #3 ID=AXb679R Expr=group_rank(ts_rank(assets, 60), subindustry)
+2025-08-27 13:35:13,377 - INFO - [Alpha] View: https://platform.worldquantbrain.com/alpha/AXb679R
+2025-08-27 13:35:13,378 - INFO - [Run] Submit: group_rank(ts_rank(assets, 60), sector)
+2025-08-27 13:35:15,524 - INFO - [Submit] Accepted. Progress URL: https://api.worldquantbrain.com/simulations/34wp1Y1nM4XDbWYfTbvnCb3
+2025-08-27 13:36:35,703 - INFO - [Run] Done: group_rank(ts_rank(assets, 60), sector)
+2025-08-27 13:36:35,703 - INFO - [Alpha] #4 ID=VQEKb08 Expr=group_rank(ts_rank(assets, 60), sector)
+2025-08-27 13:36:35,705 - INFO - [Alpha] View: https://platform.worldquantbrain.com/alpha/VQEKb08
+2025-08-27 13:36:35,705 - INFO - [Run] Submit: group_rank(ts_rank(assets, 60), densify(pv13_h_f1_sector))
+2025-08-27 13:36:37,339 - INFO - [Submit] Accepted. Progress URL: https://api.worldquantbrain.com/simulations/1jnzhQc9I5fl93MW0htgqwg
+2025-08-27 13:36:53,811 - WARNING - [Main] Interrupted by user. Stopping gracefully.
+2025-08-27 13:36:53,812 - INFO - [Main] End.
